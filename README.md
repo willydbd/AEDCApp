@@ -5,10 +5,10 @@ also forcast their next likely purchase based on their previous usage.
 User history is also tracked. 
 
 
-#Stack Used
-Java(Android)
-CSS
-HTML
-JavaScript
+#Stack Used:
+Java(Android),
+CSS,
+HTML,
+JavaScript.
 
 
