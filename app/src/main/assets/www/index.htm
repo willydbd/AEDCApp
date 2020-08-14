@@ -1,0 +1,110 @@
+<!--
+/**
+ * @author
+ * Banjo Mofesola Paul | Oluwagbuyi Abimbola
+ * Developers, Planet NEST
+ * mofesolapaul@live.com | bimbowande@gmail.com
+ * Thursday, April 28, 2016
+ */
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>AEDC App</title>
+    <meta name="author" content="Banjo Mofesola Paul | Oluwagbuyi Abimbola, Planet Nest">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/superhero.bootstrap.css"/>
+
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="css/animate.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="font-awesome-4.4.0/css/font-awesome.min.css"/>
+
+
+    <!-- jQuery JS -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Knockout JS -->
+    <script src="js/ko.min.js"></script>
+    <script src="js/knockout.mapping.js"></script>
+
+    <!-- Custom script -->
+    <script>var app_where = 'home'</script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+
+<div class="container-fluid">
+
+    <div class="panel centered" data-bind="visible: show_content">
+        <div class="panel-heading" id="panel-heading">
+            <img src="resx/ic_logo.png">
+            <div style="float: left">
+                <h4 data-bind="visible: is_login_view">Login</h4>
+                <h4 class="for-signup" data-bind="visible: is_signup_view">Enter your details</h4>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+        <div class="panel-body">
+            <form class="form form-field" data-bind="submit: submit_entry">
+                <div class="form-group animated fadeIn" data-bind="visible: is_signup_view">
+                    <input class="form-control has-user-select" id="nameField" placeholder="Name..." type="text"
+                           data-bind="value: uname, value_update: 'input'"/>
+                </div>
+                <div class="form-group">
+                    <input class="form-control has-user-select" id="emailField" placeholder="Email.." type="text"
+                           data-bind="value: email, value_update: 'input'"/>
+                </div>
+                <div class="form-group">
+                    <label class="control-label sr-only">Password:</label>
+                    <div class="input-group">
+                        <input type="password" class="form-control password has-user-select" name="pswd" placeholder="Password..."
+                               data-bind="value: pswd, value_update: 'input'" />
+                        <a class="btn btn-default input-group-addon"><span class="fa fa-eye-slash"></span></a>
+                    </div>
+                </div>
+                <div class="form-group animated fadeIn" data-bind="visible: is_signup_view">
+                    <label class="control-label sr-only">Confirm Password:</label>
+                    <div class="input-group">
+                        <input type="password" class="form-control password has-user-select" name="pswd" placeholder="Confirm password..."
+                               data-bind="value: c_pswd, value_update: 'input'" />
+                        <a class="btn btn-default input-group-addon"><span class="fa fa-eye-slash"></span></a>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" id="login" value="Login"
+                           class="form-control btn btn-primary" data-bind="visible: is_login_view">
+                    <input type="submit" id="signup" value="Signup"
+                           class="form-control btn btn-primary animated fadeIn" data-bind="visible: is_signup_view">
+                </div>
+            </form>
+        </div>
+
+        <div class="panel-footer text-center">
+            <big>
+                <a data-bind="visible: is_login_view, click: goto_signup">don't have an account? Click here to signup</a>
+                <a class="animated fadeIn" data-bind="visible: is_signup_view, click: goto_login">already signed up? Click here to login</a>
+            </big>
+        </div>
+    </div>
+</div>
+
+<footer>&copy <span data-bind="text: company"></span></footer>
+</body>
+</html>

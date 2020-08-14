@@ -1,0 +1,208 @@
+/**
+ * @author Banjo Mofesola Paul | Oluwagbuyi Abimbola
+ * Developers, Planet NEST
+ * mofesolapaul@live.com | bimbowande@gmail.com
+ * Thursday, April 28, 2016
+ */
+
+*{
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.no-user-select, html, body * {
+	-webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: -moz-none;
+    -o-user-select: none;
+    user-select: none;
+    -ms-user-select: none
+}
+.has-user-select {
+    -webkit-user-select: auto;
+    -khtml-user-select: auto;
+    -moz-user-select: -moz-auto;
+    -o-user-select: auto;
+    user-select: auto;
+    -ms-user-select: auto
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+	background-image: -webkit-gradient(linear,60% 20%,50% 40%,from(#123), to(#123)) !important;
+	font-size: 100%;
+	color: rgba(2,2,2,0.4);
+    overflow-x: hidden
+}
+
+.centered {
+    position: absolute;
+    top: 50%; left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    min-width: 320px
+}
+
+div.panel #panel-heading,.panel-footer{
+	background-image:-webkit-gradient(linear,left top, center top, from(#123),to(#678)) !important; 
+	color: white;
+}
+
+div.panel #panel-heading h4 {
+	line-height: 150%;
+}
+
+div.panel #panel-heading>img {
+	float: left;
+	height: 48px
+}
+
+div.panel-footer input{
+	margin-left: 12px;
+	box-shadow: none !important;
+	border-radius:none !important;
+}
+
+div.panel-footer a {
+    color: #ccc
+}
+
+section#login-details form{
+	border: none;
+	margin: 10%;
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#567), to(#567)) !important;
+	height: 200px;
+	box-shadow: 1px 2px 2px rgba(2,2,2,0.9);
+}
+
+section#login-details form input[type="email"],section#login-details input[type="password"],section#login-details input[type="password"]:focus{
+	border:none !important;
+	border-spacing: 2px;
+	box-shadow:none !important;
+	border-radius: 0px;
+	border-bottom: 1px solid #dce !important;
+	margin-bottom: 9px;
+	font-weight: bolder;
+}
+
+ section#login-details form h3{
+     background: rgba(2,2,2,0.4);
+     padding: 12px;
+	 margin-top:1px; 
+	 color:  white;
+}
+
+ footer {
+     position: absolute;
+     color: #ccc;
+     font-size: larger;
+     bottom: 5px; left: 0;
+     text-align: center;
+     width: 100%;
+     font-weight: bold;
+ }
+
+
+/* styles for menu.html*/
+section#menu-display{
+	margin-top: 120px;
+	text-align: center;
+	overflow-x: hidden;
+	width: 100%;
+}
+section#menu-display h4{
+	color: white;
+
+}
+section#menu-display> ul > li{
+	list-style-type: none !important;
+	font-size: 16px;s
+    display: block;
+	border-spacing: 2px;
+	background-image: -webkit-gradient(linear,right top,center bottom,from(#789),to(#456));
+	margin: 5px auto 0;
+	text-align: center;
+	padding: 25px;
+	width: 80%;
+	max-width: 480px;
+}
+section#menu-display> ul > li a{
+	color: white;
+	font-weight: bolder;
+	text-decoration: none;
+}
+
+section.top-up-fields form input{
+    width: 100%;
+    padding: 20px 21px;
+    box-sizing: border-box;
+    height: 60px;
+    border:none;
+    box-shadow: none !important;
+    border-radius:none !important
+}
+section.top-up-fields form input:focus{
+	-webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    border:none;
+    box-shadow: none;
+    box-shadow: none !important;
+    border-radius:none !important
+}
+
+.stat-group:not(last-child) {
+    margin-bottom: 1rem
+}
+
+.stat-group header {
+    color: #ccc;
+    text-transform: uppercase;
+    font-size: larger;
+}
+
+.gap {
+    height: 10px
+}
+
+.strikethrough {
+    text-decoration:line-through
+}
+
+body.usage-page {
+    padding-top: 70px;
+}
+
+/***************** CARDS *******************/
+.card {
+    background: white;
+    border-radius: 0px;
+    padding: 8px 5px;
+    margin-bottom: 2px;
+    box-shadow: 0px 1px 1px 0px gray;
+    font-size: 135%;
+}
+
+.card dt {
+    color: #555;
+}
+
+.card dd {
+    color: #777;
+}
+
+.card.medium {
+    min-height: 60px;
+    color: #aaa;
+    overflow: hidden
+}
+
+.card + .card {
+    border-top: solid thin #ccc;
+}
+/*******************************************/

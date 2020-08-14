@@ -1,0 +1,78 @@
+<!--
+/**
+ * @author
+ * Banjo Mofesola Paul | Oluwagbuyi Abimbola | Adegoke Oluwatoyin
+ * Developers, Planet NEST
+ * mofesolapaul@live.com | bimbowande@gmail.com | gokety1@gmail.com
+ * Thursday, April 28, 2016
+ */
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>AEDC App</title>
+    <meta name="author"
+          content="Banjo Mofesola Paul | Oluwagbuyi Abimbola | Adegoke Oluwatoyin, Planet Nest">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/superhero.bootstrap.css"/>
+
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="css/animate.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="font-awesome-4.4.0/css/font-awesome.min.css"/>
+
+
+    <!-- jQuery JS -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Knockout JS -->
+    <script src="js/ko.min.js"></script>
+    <script src="js/knockout.mapping.js"></script>
+
+    <!-- Custom script -->
+    <script>var app_where = 'menu'</script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-default animated fadeInDown">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <div class="navbar-brand">AEDC - <span data-bind="text: logged_email"></span></div>
+        </div>
+        <div style="color: #ccc" data-bind="text: logged_uname"></div>
+    </div>
+</nav>
+<div class="container-fluid">
+    <section id="menu-display">
+        <ul class="list-unstyled">
+            <li data-bind="click: goto_topup"><a href="topup.htm">TOP UP</a></li>
+            <li data-bind="click: show_forecast"><a>FORECAST</a></li>
+            <li data-bind="click: goto_history"><a>USAGE HISTORY</a></li>
+        </ul>
+        <div class="text-center" style="padding-top: 8px">
+            <big>
+                <a style="font-size: 130%; height: 40px; display: inline-block; padding: 1rem 1.5rem 0" href="#"
+                   data-bind="click: logout">Logout</a>
+            </big>
+        </div>
+    </section>
+</div>
+
+<footer>&copy <span data-bind="text: company"></span></footer>
+</body>
+</html>

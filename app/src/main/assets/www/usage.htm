@@ -1,0 +1,86 @@
+<!--
+/**
+ * @author
+ * Banjo Mofesola Paul | Oluwagbuyi Abimbola | Adegoke Oluwatoyin | Shawwy Bee
+ * Developers, Planet NEST
+ * mofesolapaul@live.com | bimbowande@gmail.com | gokety1@gmail.com
+ * Thursday, April 28, 2016
+ */
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>AEDC App</title>
+    <meta name="author"
+          content="Banjo Mofesola Paul | Oluwagbuyi Abimbola | Adegoke Oluwatoyin, Planet Nest">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/superhero.bootstrap.css"/>
+
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="css/animate.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="font-awesome-4.4.0/css/font-awesome.min.css"/>
+
+
+    <!-- jQuery JS -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Knockout JS -->
+    <script src="js/ko.min.js"></script>
+    <script src="js/knockout.mapping.js"></script>
+
+    <!-- Custom script -->
+    <script>var app_where = 'usage-history'</script>
+    <script src="js/script.js"></script>
+</head>
+<body class="usage-page">
+<nav class="navbar navbar-default navbar-fixed-top animated fadeInDown">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <div class="navbar-brand">AEDC - Usage history</div>
+        </div>
+        <div style="color: #ccc" data-bind="text: logged_uname"></div>
+    </div>
+</nav>
+<div class="container">
+    <!-- ko foreach: statistics -->
+    <div class="stat-group">
+        <header>
+            <strong data-bind="text: name"></strong>
+            <sup>(<span data-bind="text: stats.length"></span>)</sup>
+        </header>
+        <!-- ko foreach: stats -->
+        <div class="card">
+            <dl class="dl-horizontal">
+                <dt>Date</dt>
+                <dd data-bind="text: date"></dd>
+                <dt>PIN</dt>
+                <dd data-bind="text: pin, css: $root.first_shown? 'strikethrough':''"></dd>
+                <dt>Amount</dt>
+                <dd>&#8358;<span data-bind="text: amt, css: $root.set_first_shown()? '':''"></span>
+                </dd>
+                <dt>Power</dt>
+                <dd data-bind="text: kwh+'kwh'"></dd>
+            </dl>
+        </div>
+        <!-- /ko -->
+    </div>
+    <!-- /ko -->
+    <div class="gap"></div>
+</body>
+</html>
